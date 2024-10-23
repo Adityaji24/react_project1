@@ -1,0 +1,44 @@
+{
+  "books": [
+    {
+      "id": "27cc",
+      "bookNo": "102",
+      "title": "1984",
+      "author": "George Orwell",
+      "genre": "Dystopian",
+      "price": 8.99
+    },
+    {
+      "id": "f728",
+      "bookNo": "103",
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "genre": "Fiction",
+      "price": 7.99
+    },
+    {
+      "id": "79a0",
+      "bookNo": "104",
+      "title": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "genre": "Fiction",
+      "price": 9.99
+    },
+    {
+      "id": "c0e2",
+      "bookNo": "105",
+      "title": "Moby Dick",
+      "author": "Herman Melville",
+      "genre": "Adventure",
+      "price": 11.99
+    },
+    {
+      "id": "2e28",
+      "title": "Gulliver's Travels",
+      "bookNo": "4547",
+      "author": "Rhonda Bryne",
+      "price": "450",
+      "genre": "Fiction"
+    }
+  ]
+}

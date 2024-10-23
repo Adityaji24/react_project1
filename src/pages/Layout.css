@@ -1,0 +1,53 @@
+/* Styling for the navbar */
+.navbar {
+  background-color: #f0f8ff; /* Light blue background */
+  padding: 0.3em; /* Increased padding for a cleaner look */
+  text-align: center; /* Center the content */
+  border-bottom: 2px solid #ccc; /* Optional border */
+}
+
+.navbar-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Center links */
+  gap: 20px; /* Add spacing between the links */
+}
+
+.navbar-links li {
+  display: inline-block;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333; /* Darker text for better visibility */
+  font-weight: 600;
+  padding: 10px 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+  background-color: #333; /* Dark background on hover */
+  color: white; /* Change text color to white on hover */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Horizontal divider styling */
+.divider {
+  border: none;
+  border-top: 4px solid red;
+  margin: 2em 0; /* Spacing for vertical content separation */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar-links {
+      flex-direction: column; /* Stack links vertically on small screens */
+      gap: 10px; /* Reduce spacing between links */
+  }
+
+  .navbar a {
+      padding: 10px;
+  }
+}
