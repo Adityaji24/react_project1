@@ -6,7 +6,6 @@ import Display from "./pages/Display";
 import Search from "./pages/Search";
 import Update from "./pages/Update";
 import EditData from "./pages/EditData";
-
 const App = () => {
   return (
     <BrowserRouter>

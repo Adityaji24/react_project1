@@ -4,9 +4,10 @@
       "id": "27cc",
       "bookNo": "102",
       "title": "1984",
-      "author": "George Orwell",
+      "author": "George Thomas",
       "genre": "Dystopian",
-      "price": 8.99
+      "price": 8.99,
+      "bookName": "Annabelle"
     },
     {
       "id": "f728",
