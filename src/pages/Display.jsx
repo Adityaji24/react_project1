@@ -3,45 +3,47 @@ import axios from "axios";
 import "./Display.css"; 
 
 const Display = () => {
-  const [bookData, setBookData] = useState([]); // Change state to hold book data
+  const [bookingData, setBookingData] = useState([]); // Adjust state to hold booking data
 
   const loadData = () => {
-    let url = "http://localhost:3000/books"; // Update the endpoint to 'books'
+    let url = "http://localhost:3000/"; // Update the endpoint to 'bookings'
     axios.get(url)
       .then((res) => {
         console.log(res.data);
-        setBookData(res.data); // Set book data in state
+        setBookingData(res.data); // Set booking data in state
       })
       .catch((error) => {
-        console.error("There was an error fetching the book data!", error);
+        console.error("There was an error fetching the booking data!", error);
       });
   };
 
   useEffect(() => {
-    loadData(); // Load book data on component mount
+    loadData(); // Load booking data on component mount
   }, []);
 
   return (
     <div className="container">
-      <h1 className="title">Book Data</h1>
+      <h1 className="title">Booking Data</h1>
       <table className="table">
         <thead>
           <tr>
-            <th>Book Name</th>
-            <th>Book Number</th>
-            <th>Author</th>
-            <th>Price</th>
-            <th>Genre</th>
+            <th>Event Name</th>
+            <th>Ticket Type</th>
+            <th>Time Slot</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
           </tr>
         </thead>
         <tbody>
-          {bookData.map((book, index) => (
+          {bookingData.map((booking, index) => (
             <tr key={index}>
-              <td>{book.title}</td>
-              <td>{book.bookNo}</td>
-              <td>{book.author}</td>
-              <td>{book.price}</td>
-              <td>{book.genre}</td>
+              <td>{booking.eventName}</td>
+              <td>{booking.ticketType}</td>
+              <td>{booking.timeSlot}</td>
+              <td>{booking.name}</td>
+              <td>{booking.email}</td>
+              <td>{booking.phone}</td>
             </tr>
           ))}
         </tbody>

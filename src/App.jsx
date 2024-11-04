@@ -1,28 +1,21 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./pages/Layout";
-import Home from "./pages/Home";
-import Insert from "./pages/Insert";
-import Display from "./pages/Display";
-import Search from "./pages/Search";
-import Update from "./pages/Update";
-import EditData from "./pages/EditData";
-const App = () => {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="home" element={<Home />} />
-          <Route path="insert" element={<Insert />} />
-          <Route path="display" element={<Display />} />
-          <Route path="search" element={<Search />} />
-          <Route path="update" element={<Update />} />
-          <Route path="editrec/:myid" element={<EditData />} />
-       
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  );
-};
+import Cybrom from "./Cybrom"
+import Bhopal from "./Bhopal"
+import { useState } from "react"
+const App=()=>{
+  const[status,useStatus]=useState(false);
 
-export default App;
+  if(status==true){
+    return(
+      <>
+      <Cybrom/>
+      </>
+    )
+  }
+  else{
+    return(
+      <Bhopal/>
+    )
+    
+  }
+}
+export default App
